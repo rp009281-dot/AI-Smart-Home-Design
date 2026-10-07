@@ -1,0 +1,475 @@
+// Baseline Seed Data for Materials & Smart Features
+const defaultMaterials = [
+  // Cement
+  {
+    id: 1,
+    category: 'Cement',
+    name: 'OPC 53 Grade High Performance Cement',
+    brand: 'UltraTech',
+    unit: 'bag (50kg)',
+    price_min: 380,
+    price_max: 430,
+    durability: 'Ultra-High',
+    quality_grade: 'Premium',
+    energy_efficiency: 'Standard',
+    sustainability_rating: 4,
+    description: 'High compressive strength ideal for structural columns, beams and foundations.'
+  },
+  {
+    id: 2,
+    category: 'Cement',
+    name: 'PPC Fly-Ash Blended Eco Cement',
+    brand: 'Ambuja Kawach',
+    unit: 'bag (50kg)',
+    price_min: 350,
+    price_max: 395,
+    durability: 'High',
+    quality_grade: 'Balanced',
+    energy_efficiency: 'Eco-Certified',
+    sustainability_rating: 5,
+    description: 'Superior water repellency and crack resistance with reduced carbon footprint.'
+  },
+  {
+    id: 3,
+    category: 'Cement',
+    name: 'Rapid Hardening Concrete Cement',
+    brand: 'ACC Concrete+',
+    unit: 'bag (50kg)',
+    price_min: 410,
+    price_max: 460,
+    durability: 'Ultra-High',
+    quality_grade: 'Luxury',
+    energy_efficiency: 'Standard',
+    sustainability_rating: 4,
+    description: 'Fast setting and high initial strength for multi-story residential slabs.'
+  },
+  // Steel
+  {
+    id: 4,
+    category: 'Steel',
+    name: 'Fe-550D TMT Corrosion Resistant Rebar',
+    brand: 'Tata Tiscon',
+    unit: 'metric ton',
+    price_min: 62000,
+    price_max: 68000,
+    durability: 'Ultra-High',
+    quality_grade: 'Premium',
+    energy_efficiency: 'Standard',
+    sustainability_rating: 4,
+    description: 'Earthquake resistant with high elongation and superior ductile properties.'
+  },
+  {
+    id: 5,
+    category: 'Steel',
+    name: 'Fe-500D Primary TMT Steel Bars',
+    brand: 'JSW Neosteel',
+    unit: 'metric ton',
+    price_min: 58000,
+    price_max: 64000,
+    durability: 'High',
+    quality_grade: 'Balanced',
+    energy_efficiency: 'Standard',
+    sustainability_rating: 4,
+    description: 'Reliable core tensile reinforcement for residential columns and beams.'
+  },
+  // Bricks/Blocks
+  {
+    id: 6,
+    category: 'Bricks/Blocks',
+    name: 'AAC Autoclaved Aerated Lightweight Blocks',
+    brand: 'Magicrete',
+    unit: 'sq.ft wall',
+    price_min: 48,
+    price_max: 62,
+    durability: 'High',
+    quality_grade: 'Balanced',
+    energy_efficiency: 'Eco-Certified',
+    sustainability_rating: 5,
+    description: 'Exceptional thermal insulation, 3x lighter than clay bricks, saves AC energy costs up to 25%.'
+  },
+  {
+    id: 7,
+    category: 'Bricks/Blocks',
+    name: 'Red Clay Wire-Cut Engineered Bricks',
+    brand: 'Wienerberger',
+    unit: 'sq.ft wall',
+    price_min: 55,
+    price_max: 75,
+    durability: 'High',
+    quality_grade: 'Premium',
+    energy_efficiency: 'Standard',
+    sustainability_rating: 4,
+    description: 'Traditional structural aesthetics with excellent compressive strength and weather resistance.'
+  },
+  {
+    id: 8,
+    category: 'Bricks/Blocks',
+    name: 'Fly Ash Interlocking Eco Bricks',
+    brand: 'EcoBricks Pro',
+    unit: 'sq.ft wall',
+    price_min: 36,
+    price_max: 46,
+    durability: 'Standard',
+    quality_grade: 'Economy',
+    energy_efficiency: 'Eco-Certified',
+    sustainability_rating: 5,
+    description: 'Cost-efficient, uniform dimensions reducing mortar usage and plastering costs.'
+  },
+  // Flooring
+  {
+    id: 9,
+    category: 'Flooring',
+    name: 'Full Body Vitrified Large Format Tiles (4x2 ft)',
+    brand: 'Kajaria Eternity',
+    unit: 'sq.ft',
+    price_min: 75,
+    price_max: 140,
+    durability: 'High',
+    quality_grade: 'Balanced',
+    energy_efficiency: 'Standard',
+    sustainability_rating: 4,
+    description: 'Scratch-resistant, low porosity, elegant modern matte and polished finishes.'
+  },
+  {
+    id: 10,
+    category: 'Flooring',
+    name: 'Italian Statuario Marble Slabs',
+    brand: 'Classic Marble',
+    unit: 'sq.ft',
+    price_min: 350,
+    price_max: 750,
+    durability: 'Ultra-High',
+    quality_grade: 'Luxury',
+    energy_efficiency: 'Standard',
+    sustainability_rating: 3,
+    description: 'Luxurious natural stone with mirror polish for master living rooms and foyers.'
+  },
+  {
+    id: 11,
+    category: 'Flooring',
+    name: 'SPC Water-Resistant Engineered Wood Flooring',
+    brand: 'Action TESA',
+    unit: 'sq.ft',
+    price_min: 110,
+    price_max: 195,
+    durability: 'High',
+    quality_grade: 'Premium',
+    energy_efficiency: 'Eco-Certified',
+    sustainability_rating: 4,
+    description: 'Warm aesthetic, sound dampening, 100% waterproof stone plastic composite for bedrooms.'
+  },
+  {
+    id: 12,
+    category: 'Flooring',
+    name: 'Anti-Skid Ceramic Matte Floor Tiles',
+    brand: 'Somany Ceramics',
+    unit: 'sq.ft',
+    price_min: 45,
+    price_max: 70,
+    durability: 'Standard',
+    quality_grade: 'Economy',
+    energy_efficiency: 'Standard',
+    sustainability_rating: 4,
+    description: 'High grip texture ideal for bathrooms, utility, balconies and wet areas.'
+  },
+  // Paint
+  {
+    id: 13,
+    category: 'Paint',
+    name: 'Royale Aspira Ultra Luxury Anti-Bacterial Interior',
+    brand: 'Asian Paints',
+    unit: 'liter',
+    price_min: 580,
+    price_max: 720,
+    durability: 'Ultra-High',
+    quality_grade: 'Luxury',
+    energy_efficiency: 'Eco-Certified',
+    sustainability_rating: 5,
+    description: 'Zero VOC, flame-retardant, Teflon surface protector with stain cleanability.'
+  },
+  {
+    id: 14,
+    category: 'Paint',
+    name: 'Weathercoat Long Life PU Exterior Acrylic',
+    brand: 'Berger Paints',
+    unit: 'liter',
+    price_min: 420,
+    price_max: 560,
+    durability: 'Ultra-High',
+    quality_grade: 'Premium',
+    energy_efficiency: 'Eco-Certified',
+    sustainability_rating: 4,
+    description: 'PU-reinforced exterior protection against rain, fungal growth, and intense sun heat.'
+  },
+  {
+    id: 15,
+    category: 'Paint',
+    name: 'Tractor Emulsion Washable Interior Finish',
+    brand: 'Asian Paints',
+    unit: 'liter',
+    price_min: 190,
+    price_max: 260,
+    durability: 'Standard',
+    quality_grade: 'Economy',
+    energy_efficiency: 'Standard',
+    sustainability_rating: 4,
+    description: 'Cost-effective smooth interior wall finish with washability.'
+  },
+  // Doors
+  {
+    id: 16,
+    category: 'Doors',
+    name: 'Engineered Teakwood Paneled Main Entrance Door',
+    brand: 'Greenlam Mikasa',
+    unit: 'unit',
+    price_min: 18000,
+    price_max: 35000,
+    durability: 'Ultra-High',
+    quality_grade: 'Luxury',
+    energy_efficiency: 'Standard',
+    sustainability_rating: 4,
+    description: 'Solid core security door with weather sealant and brass mortise locking mechanism.'
+  },
+  {
+    id: 17,
+    category: 'Doors',
+    name: 'HDF Molded Flush Doors for Bedrooms',
+    brand: 'CenturyPly',
+    unit: 'unit',
+    price_min: 5500,
+    price_max: 9500,
+    durability: 'High',
+    quality_grade: 'Balanced',
+    energy_efficiency: 'Eco-Certified',
+    sustainability_rating: 4,
+    description: 'Moisture-resistant bonded flush core with wood-grain veneer finish.'
+  },
+  {
+    id: 18,
+    category: 'Doors',
+    name: 'Waterproof WPC Polymer Doors for Bathrooms',
+    brand: 'Ecoste WPC',
+    unit: 'unit',
+    price_min: 3800,
+    price_max: 6200,
+    durability: 'Ultra-High',
+    quality_grade: 'Balanced',
+    energy_efficiency: 'Eco-Certified',
+    sustainability_rating: 5,
+    description: '100% termite, borer, and water proof polymer core for wet areas.'
+  },
+  // Windows
+  {
+    id: 19,
+    category: 'Windows',
+    name: 'UPVC Double Glazed Energy-Efficient Sliding Windows',
+    brand: 'Fenesta',
+    unit: 'sq.ft',
+    price_min: 480,
+    price_max: 780,
+    durability: 'Ultra-High',
+    quality_grade: 'Premium',
+    energy_efficiency: 'Eco-Certified',
+    sustainability_rating: 5,
+    description: 'Multi-chambered profile with Low-E double glazing; cuts noise by 40dB and heat by 30%.'
+  },
+  {
+    id: 20,
+    category: 'Windows',
+    name: 'Powder Coated Anodized Aluminum 3-Track Windows',
+    brand: 'Jindal Aluminium',
+    unit: 'sq.ft',
+    price_min: 280,
+    price_max: 420,
+    durability: 'High',
+    quality_grade: 'Balanced',
+    energy_efficiency: 'Standard',
+    sustainability_rating: 4,
+    description: 'Sleek slim profile with nylon mosquito mesh track and smooth rollers.'
+  },
+  // Roofing
+  {
+    id: 21,
+    category: 'Roofing',
+    name: 'Solar Heat Reflective Cool Roof Tile Coating',
+    brand: 'Dr. Fixit / Starshield',
+    unit: 'sq.ft',
+    price_min: 35,
+    price_max: 60,
+    durability: 'High',
+    quality_grade: 'Balanced',
+    energy_efficiency: 'Eco-Certified',
+    sustainability_rating: 5,
+    description: 'High SRI (Solar Reflective Index) reduces roof temperature by up to 12°C.'
+  },
+  {
+    id: 22,
+    category: 'Roofing',
+    name: 'Concrete Slab with APP Bituminous Waterproofing Membrane',
+    brand: 'Fosroc Nitoproof',
+    unit: 'sq.ft',
+    price_min: 65,
+    price_max: 110,
+    durability: 'Ultra-High',
+    quality_grade: 'Premium',
+    energy_efficiency: 'Standard',
+    sustainability_rating: 4,
+    description: 'Multi-layer terrace waterproofing to protect against leakage and heavy monsoons.'
+  },
+  // Electrical
+  {
+    id: 23,
+    category: 'Electrical',
+    name: 'FR-LSH Lead-Free Copper House Wires',
+    brand: 'Polycab Maxima',
+    unit: '100m coil',
+    price_min: 2400,
+    price_max: 3200,
+    durability: 'Ultra-High',
+    quality_grade: 'Premium',
+    energy_efficiency: 'Eco-Certified',
+    sustainability_rating: 5,
+    description: 'Flame retardant, low smoke and zero halogen emission certified copper conductors.'
+  },
+  {
+    id: 24,
+    category: 'Electrical',
+    name: 'Smart Modular Touch Switches with Surge Suppressor',
+    brand: 'Schneider AvatarOn',
+    unit: 'per switch point',
+    price_min: 250,
+    price_max: 600,
+    durability: 'Ultra-High',
+    quality_grade: 'Premium',
+    energy_efficiency: 'Standard',
+    sustainability_rating: 4,
+    description: 'Sleek frameless design with built-in surge suppressor and IoT connectivity.'
+  },
+  // Plumbing
+  {
+    id: 25,
+    category: 'Plumbing',
+    name: 'CPVC Lead-Free Hot & Cold Water Piping System',
+    brand: 'Astral Pipes',
+    unit: 'bundle (10ft)',
+    price_min: 450,
+    price_max: 750,
+    durability: 'Ultra-High',
+    quality_grade: 'Premium',
+    energy_efficiency: 'Eco-Certified',
+    sustainability_rating: 5,
+    description: 'NSF certified potable drinking water safe, handles high temperatures up to 93°C.'
+  },
+  {
+    id: 26,
+    category: 'Plumbing',
+    name: 'UPVC Eco Drainage & Rainwater Harvest Pipes',
+    brand: 'Supreme Industries',
+    unit: 'bundle (10ft)',
+    price_min: 380,
+    price_max: 620,
+    durability: 'High',
+    quality_grade: 'Balanced',
+    energy_efficiency: 'Eco-Certified',
+    sustainability_rating: 5,
+    description: 'UV stabilized, anti-choke smooth bore piping for sewerage and stormwater.'
+  }
+];
+
+const defaultSmartFeatures = [
+  {
+    id: 1,
+    category: 'Lighting',
+    feature_name: 'AI Tunable CCT Smart Lighting System',
+    description: 'Circadian rhythm synced smart LED downlights that adjust color temperature from warm to cool based on daylight.',
+    approx_price: 18000,
+    energy_impact: 'Saves 35% lighting electricity with automatic occupancy shutoff',
+    icon_name: 'Lightbulb'
+  },
+  {
+    id: 2,
+    category: 'Security',
+    feature_name: 'AI Biometric & Video Smart Door Lock',
+    description: 'Keyless entry with fingerprint, passcode, facial recognition, and smartphone remote unlocking with visitor chime camera.',
+    approx_price: 16500,
+    energy_impact: 'Zero standby drain, battery lasts 12 months',
+    icon_name: 'Lock'
+  },
+  {
+    id: 3,
+    category: 'Security',
+    feature_name: '360° AI Smart Perimeter & Indoor Cameras',
+    description: 'Night vision cameras with human & pet detection, 2K HDR resolution, two-way audio, and local encrypted cloud storage.',
+    approx_price: 24000,
+    energy_impact: 'Low power PoE (Power over Ethernet) consumption',
+    icon_name: 'Video'
+  },
+  {
+    id: 4,
+    category: 'Climate',
+    feature_name: 'Smart Inverter HVAC & Thermostat Controller',
+    description: 'Machine learning thermostat that learns family occupancy patterns, pre-cools rooms during off-peak tariff hours.',
+    approx_price: 22000,
+    energy_impact: 'Reduces cooling costs by 22-28% annually',
+    icon_name: 'ThermometerSnowflake'
+  },
+  {
+    id: 5,
+    category: 'Energy',
+    feature_name: 'Rooftop Smart Solar PV with Net Metering & Battery Storage',
+    description: 'Monocrystalline bifacial solar panels paired with real-time app dashboard tracking unit generation and self-consumption.',
+    approx_price: 185000,
+    energy_impact: 'Generates 60-80% of total household electricity requirements',
+    icon_name: 'Sun'
+  },
+  {
+    id: 6,
+    category: 'Energy',
+    feature_name: 'Whole-Home IoT Smart Energy Monitor',
+    description: 'Panel-level energy meter tracking device-level wattage, peak loads, vampire draw, and billing forecast alerts.',
+    approx_price: 12500,
+    energy_impact: 'Identifies inefficient appliances and reduces wastage by 15%',
+    icon_name: 'Zap'
+  },
+  {
+    id: 7,
+    category: 'Water',
+    feature_name: 'Automated Ultrasonic Water Tank & Borewell Manager',
+    description: 'Automatic motor controller with anti-overflow, dry-run protection, and water consumption analytics.',
+    approx_price: 9500,
+    energy_impact: 'Prevents water wastage and pump motor burnouts',
+    icon_name: 'Droplets'
+  },
+  {
+    id: 8,
+    category: 'Automation',
+    feature_name: 'Motorized Smart Curtain & Blind Actuators',
+    description: 'Voice and sunlight-controlled motorized tracks that automatically close during peak afternoon heat to reduce thermal load.',
+    approx_price: 15000,
+    energy_impact: 'Reduces AC cooling load by keeping solar heat out',
+    icon_name: 'Blinds'
+  },
+  {
+    id: 9,
+    category: 'Safety',
+    feature_name: 'IoT Smoke, Gas Leakage & Water Flood Sensors',
+    description: 'Instant push notifications and loud acoustic siren upon detecting LPG leaks, smoke, or bathroom pipe bursts.',
+    approx_price: 8500,
+    energy_impact: 'Protects property against catastrophic leaks and fires',
+    icon_name: 'ShieldAlert'
+  },
+  {
+    id: 10,
+    category: 'Hub',
+    feature_name: 'Central Edge AI Smart Home Hub (Matter & Zigbee 3.0)',
+    description: 'Offline-capable central smart hub unifying lights, locks, ACs, sensors into a single unified mobile & voice dashboard.',
+    approx_price: 14000,
+    energy_impact: 'Coordinates all sub-systems under 15W standby consumption',
+    icon_name: 'Cpu'
+  }
+];
+
+module.exports = {
+  defaultMaterials,
+  defaultSmartFeatures
+};
